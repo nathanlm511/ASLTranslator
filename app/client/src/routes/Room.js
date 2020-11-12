@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import io from "socket.io-client";
+import {CopyToClipboard} from 'react-copy-to-clipboard';
 
 const Room = (props) => {
     const userVideo = useRef();
@@ -118,11 +119,37 @@ const Room = (props) => {
     function handleTrackEvent(e) {
         partnerVideo.current.srcObject = e.streams[0];
     };
+    function getRoomId(pathname){
+        const length = pathname.length;
+        const id = pathname.substring(6,length);
+        console.log(id);
+        return id;
+    }
 
     return (
-        <div>
-            <video autoPlay ref={userVideo} />
-            <video autoPlay ref={partnerVideo} />
+        <div className="container-fluid bg-primary" style={{ height:'100vh' }}>
+            <div className="row align-items-center p-5">
+                <div className="col-12 text-center">
+                    <h1 className="display-3 text-white ">ASL Translator</h1>
+                </div>
+                <div className="col-12 text-center pb-3">
+                    <CopyToClipboard 
+                        text={getRoomId(props.history.location.pathname)}
+                        onCopy={() => console.log('copied')}>
+                        <button className="btn btn-outline-success">Copy room ID to clipboard</button>
+                    </CopyToClipboard>
+                </div>
+                <div className="col-12 rounded">
+                    <div className="row align-items-center p-5 bg-secondary rounded">
+                        <div className="col-6 overflow-hidden rounded p-0" style={{maxHeight: '500px'}}>
+                            <video className="w-100 h-100" autoPlay ref={userVideo} />
+                            </div>
+                            <div className="col-6 overflow-hidden rounded p-0" style={{maxHeight: '500px'}}>
+                            <video className="w-100 h-100" autoPlay ref={partnerVideo} />
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };
