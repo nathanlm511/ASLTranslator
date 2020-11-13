@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import io from "socket.io-client";
+import './Room.css';
 
 const Room = (props) => {
     const userVideo = useRef();
@@ -120,9 +121,19 @@ const Room = (props) => {
     };
 
     return (
-        <div>
-            <video autoPlay ref={userVideo} />
-            <video autoPlay ref={partnerVideo} />
+        <div class="room-background">
+            <div class="title">Meeting Room</div>
+            <div class="meeting-rooms">
+                <div class="card">
+                    <div class="video-title">Your Video</div>
+                    <video class="video" autoPlay ref={userVideo} />
+                </div>
+            
+                <div class="card">
+                    <div>Their Video</div>
+                    <video class="video" autoPlay ref={partnerVideo} />
+                </div>
+            </div>
         </div>
     );
 };

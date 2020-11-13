@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+.room-background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #FBF7F4;
+}
+
+.title {
+    margin-top: 20px;
+    color: #A1683A;
+    text-align: center;
+    font-family: 'Open-Sans', sans-serif;
+    font-weight: 600;
+    font-size: 8rem;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #FBF7F4;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.video {
+    border-radius: 5px;
+}
+
+.video-title {
+    color: #6C9A8B;
+}
+
+.meeting-rooms {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}

@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap');
+
+.background {
+    background-image: url("../images/love_hands.jpg");
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../images/love_hands.jpg");
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-text {
+    margin-top: 75px;
+    text-align: center;
+    font-family: 'Open-Sans', sans-serif;
+    font-weight: 600;
+    font-size: 11rem;
+    color: #EED2CC;
+}
+
+.description {
+    margin-top: 10px;
+    text-align: center;
+    font-family: 'Lora', serif;
+    font-size: 3.25rem;
+    color: #FBF7F4
+}
+
+.create-room-button {
+    margin-top: 50px;
+    background-color: rgba(0, 0, 0, 0);
+    color: #EED2CC;
+    padding:0.46em 1.6em;
+    border:0.1em solid #EED2CC;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Open-Sans',sans-serif;
+    font-weight: 600;
+    text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+    text-align:center;
+    transition: all 0.15s;
+    font-size: 3.25rem;
+}
+
+.create-room-button:hover{
+    text-shadow: 0 0 1em rgba(255,255,255,1);
+    color:#E8998D;
+    border-color:#E8998D;
+}
+
+.theme {
+    color: #6C9A8B
+}
