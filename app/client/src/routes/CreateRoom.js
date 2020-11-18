@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { v1 as uuid } from 'uuid';
+import './CreateRoom.css';
 
 const CreateRoom = (props) => {
     const [roomId, setRoomId] = useState();
@@ -60,6 +61,7 @@ const CreateRoom = (props) => {
                     </div>
                 </div>
             </div>
+
     );
 };
 
